@@ -1,24 +1,22 @@
-# First Steps
+# צעדים ראשונים
 
-We will now see how to run a traditional 'Hello World' program in Python. This will teach you how to write, save and run Python programs.
+כעת נראה איך להריץ תוכנית "Hello World" מסורתית בפייתון. כך נלמד איך לכתוב, לשמור ולהריץ תוכניות פייתון.
 
-There are two ways of using Python to run your program - using the interactive interpreter prompt or using a source file. We will now see how to use both of these methods.
+ישנן שתי דרכים להשתמש בפייתון בשביל להריץ את הקוד שלך - שימוש במפרש (interpreter) אינטראקטיבי או שימוש בקבצי קוד מקור. כעת נראה כיצד להשתמש בשתי הדרכים. 
 
-## Using The Interpreter Prompt
+## שימוש במפרש האינטראקטיבי
+פתח.י את הטרמינל (כפי שנלמד בפרק [ההתקנה](./installation.md#installation)) ופתח.י את האינטרפרטר בכתיבת הפקודה `python3` ולחיצה על הכפתור `[enter]`.
 
-Open the terminal in your operating system (as discussed previously in the [Installation](./installation.md#installation) chapter) and then open the Python prompt by typing `python3` and pressing `[enter]` key.
+כאשר פייתון נפתח, את.ה אמור לראות `>>>` ליד הסמן שניתן לכתוב. זה יסמן לנו שאנחנו נמצאים בתוך _האינטרפרטר האינטראקטיבי של פייתון_
 
-Once you have started Python, you should see `>>>` where you can start typing stuff. This is called the _Python interpreter prompt_.
-
-At the Python interpreter prompt, type:
+בתוך האינטרפרטר, כתב.י:
 
 ```python
 print("Hello World")
 ```
+ולאחר מכן לחצ.י על הכפתור `[enter]`. המילים "Hello World" אמורות להופיע על המסך.
 
-followed by the `[enter]` key. You should see the words `Hello World` printed to the screen.
-
-Here is an example of what you should be seeing, when using a Mac OS X computer. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.
+הנה דוגמה של מה שאת.ה אמור.ה לראות, כאשר משתמשים במחשב מק. הפרטים של גרסת הפייתון ישתנו ממחשב למחשב, אבל החל מפתיחת התוכנה (כלומר, החל מהפעם הראשונה שמופיע `>>>`) מה שרואים צריך להיות זהה בכל מחשב וכל מערכת הפעלה.
 
 <!-- The output should match pythonVersion variable in book.json -->
 ```python
@@ -29,52 +27,44 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> print("Hello World")
 Hello World
 ```
+שימ.י לב שפייתון מחזיר תשובה מיידית לשורה שכתבת! מה שהכנסת היא _ביטוי_ (statement) בודד. אנחנו משתמשים ב`print` (באופן לא מפתיע) על מנת להדפיס כל ערך שנספק לו. במקרה שלנו, סיפקנו את הטקסט `Hello World` והוא אכן מודפס למסך.
 
-Notice that Python gives you the output of the line immediately! What you just entered is a single Python _statement_. We use `print` to (unsurprisingly) print any value that you supply to it. Here, we are supplying the text `Hello World` and this is promptly printed to the screen.
+### איך לצאת מאינטרפרטר
 
-### How to Quit the Interpreter Prompt
+אם את.ה משתמש במערכות ההפעלה לינוקס או מק, את.ה יכול לצאת מהאינטרפרטר באמצעות לחיצה על `[ctrl+d]` או כתיבת הפקודה `exit()` (שימ.י לב: חשוב לרשום את הסוגריים, `()`) ולאחר מכן לחיצה על הכפתור `[enter]`.
 
-If you are using a GNU/Linux or OS X shell, you can exit the interpreter prompt by pressing `[ctrl + d]` or entering `exit()` (note: remember to include the parentheses, `()`) followed by the `[enter]` key.
+אם את.ה משתמש במערכת ההפעלה ווינדוס, עדיין ניתן לכתוב את הפקודה `exit()` או לחלופין ללחוץ על `[ctrl+z]` ולאחר מכן על הכפתור `[enter]`. 
 
-If you are using the Windows command prompt, press `[ctrl + z]` followed by the `[enter]` key.
 
-## Choosing An Editor
+## בחירת עורך טקסט
 
-We cannot type out our program at the interpreter prompt every time we want to run something, so we have to save them in files and can run our programs any number of times.
+זה יהיה מסורבל מאוד לכתוב את התוכנה שלנו מחדש בכל פעם שאנחנו רוצים לכתוב משהו, ולכן נרצה לשמור אותה בקבצים ולהריץ מתי שנרצה. לקבצים האלו נקרא _קבצי קוד מקור_ (source code files)
 
-To create our Python source files, we need an editor software where you can type and save. A good programmer's editor will make your life easier in writing the source files. Hence, the choice of an editor is crucial indeed. You have to choose an editor as you would choose a car you would buy. A good editor will help you write Python programs easily, making your journey more comfortable and helps you reach your destination (achieve your goal) in a much faster and safer way.
+כדי ליצור קבצי קוד מקור בפייתון, אנחנו צריכים תוכנת עריכה שאיתה נכתוב ונשמור את הקוד. תוכנה טובה תעשה לנו חיים קלים בכתיבת קבצי קוד המקור שלנו. אחת הדרישות הבסיסיות שלנו מתוכנת העריכה תהיה _צביעת תחביר השפה_ כך שכל החלקים השונים בתוכנית הפייתון שלך יהיו מסומנים בצבעים שונים כך שניתן _לראות_ את התוכנית בקלות. 
 
-One of the very basic requirements is _syntax highlighting_ where all the different parts of your Python program are colorized so that you can _see_ your program and visualize its running.
+אם את.ה לא בטוח.ה באיזו תוכנה להשתמש, אפשרות מומלצת היא [פייצ'ארם](https://www.jetbrains.com/pycharm-edu/) שזמינה בווינדוס, מק ולינוקס. 
 
-If you have no idea where to start, I would recommend using [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
+אם את.ה משתמש.ת בווינדוס, *אל תשתמש.י בnotepad* - זאת בחירה רעה בגלל שnotepad לא מדגישה את הסינטקס (תחביר) של פייתון ולא מאפשרת בקלות הזחה של הטקסט (הזזה שלו הצידה), שזו דרישה הכרחית כאשר נכתוב בפייתון. תוכנות עריכה טובות יעשו את שני הדברים האלו אוטומטית. 
 
-If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
 
-If you are an experienced programmer, then you must be already using [Vim](http://www.vim.org) or [Emacs](http://www.gnu.org/software/emacs/). Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use both for most of my programs, and have even written an [entire book on Vim]({{ book.vimBookUrl }}).
+## פייצ'ארם {#pycharm}
 
-In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do learn to use either of them as it will be very useful for you in the long run. However, as I mentioned before, beginners can start with PyCharm and focus the learning on Python rather than the editor at this moment.
+[פייצ'ארם](https://www.jetbrains.com/pycharm-edu/) היא תוכנת עריכת טקסט חינמית שנועדה לכתיבת קוד פייתון.
 
-To reiterate, please choose a proper editor - it can make writing Python programs more fun and easy.
+כאשר את.ה פותח.ת פייצ'ארם, לחצ.י על `Create New Project`:
 
-If you are interested in a detailed discussion on this topic, check out [Finding the Perfect Python Code Editor](https://realpython.com/courses/finding-perfect-python-code-editor/).
-
-## PyCharm {#pycharm}
-
-[PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) is a free editor which you can use for writing Python programs.
-
-When you open PyCharm, you'll see this, click on `Create New Project`:
 
 ![When you open PyCharm](./img/pycharm_open.png)
 
-Select `Pure Python`:
+בחר.י `Pure Python`:
 
 ![PyCharm New Project](./img/pycharm_create_new_project.png)
 
-Change `untitled` to `helloworld` as the location of the project, you should see details similar to this:
+החליפ.י את השם `untitled` לשם לבחירתך, למשל `hello_world`:
 
 ![PyCharm project details](./img/pycharm_create_new_project_pure_python.png)
 
-Click the `Create` button.
+לחצ.י על הכפתור `Create`.
 
 Right-click on the `helloworld` in the sidebar and select `New` -> `Python File`:
 
